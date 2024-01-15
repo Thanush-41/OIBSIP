@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple Login System</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Simple Login System</h1>
+        <form id="registerForm">
+            <label for="regUsername">Username:</label>
+            <input type="text" id="regUsername" required>
+            <br>
+            <label for="regPassword">Password:</label>
+            <input type="password" id="regPassword" required>
+            <br>
+            <button type="button" onclick="register()">Register</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="toggleForm('loginForm')">Login here</a></p>
+        <form id="loginForm">
+            <h1>Login</h1>
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" required>
+            <br>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" required>
+            <br>
+            <button type="button" onclick="login()">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" onclick="toggleForm('registerForm')">Register here</a></p>
+        <div id="message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
